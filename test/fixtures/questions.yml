@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyString
+  context: MyString
+  assessment_id: 
+
+two:
+  body: MyString
+  context: MyString
+  assessment_id: 

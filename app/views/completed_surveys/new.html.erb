@@ -1,10 +1,8 @@
 <h1>Hello world</h1>
 
-<%= form_for @completed_survey do |form|%>
+<%= form_for @completed_survey do |form| %>
   <br />
   <!-- Form field to allow user to answer question -->
-  <%= evaluation_form.hidden_field :question_id, value: evaluation_form.object.question.id %>
-
   <%= form.fields_for :evaluations do |evaluation_form| %>
 
     <%= evaluation_form.object.question.body %>

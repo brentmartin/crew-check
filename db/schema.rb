@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20160515180533) do
   add_index "completed_surveys", ["survey_id"], name: "index_completed_surveys_on_survey_id", using: :btree
 
   create_table "evaluations", force: :cascade do |t|
-    t.integer  "answer"
+    t.float    "answer"
     t.integer  "question_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false

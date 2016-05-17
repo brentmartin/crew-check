@@ -1,0 +1,16 @@
+<h1><%= @survey.assessment.title %></h1>
+
+<h1><%= @survey.heading %></h1>
+
+<h1>RESULTS</h1>
+
+<ul>
+<% @survey.questions.each do |question| %>
+
+  <li>
+    <%= question.body %>:
+    <%= question.average_answer_for_survey(@survey) %>
+  </li>
+
+<% end %>
+</ul>

@@ -1,0 +1,16 @@
+<h1>Hey, lets make a new survey!<h1/>
+
+<h2>List of surveys<h2/>
+<%= form_for @survey, url: {action: "new"} do |survey_form| %>
+
+  <div>
+    <h5>heading:</h5>
+    <%= survey_form.text_field :heading %>
+  <div />
+  <div>
+    <h5>intro:</h5>
+    <%= survey_form.text_field :intro %>
+  <div />
+
+  <%= survey_form.submit "Submit" %>
+<% end %>

@@ -1,15 +1,20 @@
 class SurveysController < ApplicationController
   before_action :set_survey, only: [:show, :edit, :update, :destroy]
 
+  def show
+  end
+
   def new
-    @assessment = Assessment.all
     @survey = Survey.new
   end
 
   def create
     @survey = Survey.new(survey_params)
     @survey.save
-    redirect_to new_survey_path
+
+    flash[:success] = "Survey created."
+
+    redirect_to root_path
   end
 
   private

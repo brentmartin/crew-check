@@ -1,16 +1,10 @@
-<h1>Hey, lets make a new survey!<h1/>
+<h1>Hey, let us make merry. And a new survey.</h1>
 
-<h2>List of surveys<h2/>
-<%= form_for @survey, url: {action: "new"} do |survey_form| %>
+<%= simple_form_for @survey do |survey_form| %>
+  <p>heading: <%= survey_form.text_field :heading %></p>
+  <p>intro: <%= survey_form.text_field :intro %></p>
 
-  <div>
-    <h5>heading:</h5>
-    <%= survey_form.text_field :heading %>
-  <div />
-  <div>
-    <h5>intro:</h5>
-    <%= survey_form.text_field :intro %>
-  <div />
+  <%= survey_form.association :assessment, as: :radio_buttons %>
 
   <%= survey_form.submit "Submit" %>
 <% end %>

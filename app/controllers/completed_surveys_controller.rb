@@ -5,9 +5,9 @@ class CompletedSurveysController < ApplicationController
   end
 
   def new
-    survey = Survey.first
-    @completed_survey = CompletedSurvey.new(survey: survey)
-    survey.questions.each do |question|
+    @survey = Survey.find(params[:survey_id])
+    @completed_survey = CompletedSurvey.new(survey: @survey)
+    @survey.questions.each do |question|
       @completed_survey.evaluations.build(question: question)
     end
   end
@@ -16,7 +16,7 @@ class CompletedSurveysController < ApplicationController
     completed_survey = CompletedSurvey.new(completed_survey_params)
     completed_survey.survey = Survey.first
     completed_survey.save
-    redirect_to new_completed_survey_path
+    redirect_to root_path
   end
 
   private

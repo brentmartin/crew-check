@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160513183624) do
+ActiveRecord::Schema.define(version: 20160515180533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,14 +23,23 @@ ActiveRecord::Schema.define(version: 20160513183624) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "evaluations", force: :cascade do |t|
-    t.float    "answer"
-    t.boolean  "completion"
-    t.integer  "question_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "completed_surveys", force: :cascade do |t|
+    t.integer  "survey_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
+  add_index "completed_surveys", ["survey_id"], name: "index_completed_surveys_on_survey_id", using: :btree
+
+  create_table "evaluations", force: :cascade do |t|
+    t.float    "answer"
+    t.integer  "question_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.integer  "completed_survey_id"
+  end
+
+  add_index "evaluations", ["completed_survey_id"], name: "index_evaluations_on_completed_survey_id", using: :btree
   add_index "evaluations", ["question_id"], name: "index_evaluations_on_question_id", using: :btree
 
   create_table "questions", force: :cascade do |t|
@@ -53,6 +62,8 @@ ActiveRecord::Schema.define(version: 20160513183624) do
 
   add_index "surveys", ["assessment_id"], name: "index_surveys_on_assessment_id", using: :btree
 
+  add_foreign_key "completed_surveys", "surveys"
+  add_foreign_key "evaluations", "completed_surveys"
   add_foreign_key "evaluations", "questions"
   add_foreign_key "questions", "assessments"
   add_foreign_key "surveys", "assessments"

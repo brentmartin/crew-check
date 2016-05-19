@@ -34,6 +34,14 @@ body {
       box-shadow: 0 .5px 6px rgba(0, 0, 0, 0.05);
       border-radius: 3px;
       padding: 1em;
+
+      .assessment-selected {
+        color: #333;
+        background:rgba(245,245,245,0.5);
+        text-shadow: 0 .5px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: none;
+        transition: all 200ms linear;
+      }
     }
 
     .aside-survey-new {
@@ -44,17 +52,37 @@ body {
 
 
       .heading-input {
+        padding-left: .5em;
         border-style: none;
         font-size: 1em;
+        color: #333;
         width: 100%;
         height: 2em;
+        border-radius: 4px;
+        background:rgba(255,255,255,0.6);
+        &:focus {
+          transition: all 200ms linear;
+          box-shadow: 0 .5px 6px rgba(0, 0, 0, 0.1);
+          background:rgba(255,255,255,0.9);
+        }
       }
       textarea#intro {
+        padding: .4em .5em;
         border-style: none;
         font-size: 1em;
+        color: #333;
         width: 100%;
-        height: 4em;
+        height: 6.5em;
+        border-radius: 4px;
+        resize: none;
+        background:rgba(255,255,255,0.6);
+        &:focus {
+          transition: all 200ms linear;
+          box-shadow: 0 .5px 6px rgba(0, 0, 0, 0.1);
+          background:rgba(255,255,255,0.9);
+        }
       }
+
       .submit-button {
         color: #7d7d7d;
         background-color: white;
@@ -65,14 +93,62 @@ body {
         border-radius: 3px;
         width: 100%;
         max-width: 5em;
-
+        &:hover {
+          color: #333;
+        }
+        &:focus {
+          transition: all 200ms linear;
+          background-color: #ddd;
+          color: #333;
+        }
       }
-      .submit-button:hover {
+
+      .submit-button:focus {
+        transition: all 200ms linear;
         background-color: #ddd;
         color: #333;
       }
-
     }
 
+    .assessment-collection {
+      $large-screen: 50em !default;
+
+      .assessment-button {
+        display: none;
+      }
+
+      label {
+        margin: 1em 0 0;
+        height: 3.5em;
+        width: 100%;
+        display: block;
+        padding: 1em 0.5em;
+        font-weight: 300;
+        font-size: 1.5em;
+        background:rgba(245,245,245,0.9);
+        box-shadow: 0 .5px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        color: #7d7d7d;
+
+        @include media($large-screen) {
+          float: left;
+        }
+      }
+
+      .button-assess-group {
+        cursor: pointer;
+        width: 100%;
+
+        :hover {
+          color: #333;
+        }
+
+        @include media($large-screen) {
+          width: auto;
+        }
+      }
+
+
+    }
   }
 }

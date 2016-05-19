@@ -11,22 +11,22 @@
 
     <%= evaluation_form.hidden_field :question_id, value: evaluation_form.object.question.id %>
 
-    <p>
-      <%= evaluation_form.label :answer, "1" %>
+    <div class="eval-button">
+      <%= evaluation_form.label :answer, "1", :class=>"button-group-item"%>
       <%= evaluation_form.radio_button :answer, 1.0 %>
       <span class="radio_span"></span>
-      <%= evaluation_form.label :answer, "2"%>
+      <%= evaluation_form.label :answer, "2", :class=>"button-group-item" %>
       <%= evaluation_form.radio_button :answer, 2.0 %>
       <span class="radio_span"></span>
-      <%= evaluation_form.label :answer, "3" %>
+      <%= evaluation_form.label :answer, "3", :class=>"button-group-item" %>
       <%= evaluation_form.radio_button :answer, 3.0 %>
       <span class="radio_span"></span>
-      <%= evaluation_form.label :answer, "4" %>
+      <%= evaluation_form.label :answer, "4", :class=>"button-group-item" %>
       <%= evaluation_form.radio_button :answer, 4.0 %>
       <span class="radio_span"></span>
-      <%= evaluation_form.label :answer, "5" %>
+      <%= evaluation_form.label :answer, "5", :class=>"button-group-item" %>
       <%= evaluation_form.radio_button :answer, 5.0 %>
-    </p>
+    </div>
   <% end %>
 
   <!-- Submit the form -->

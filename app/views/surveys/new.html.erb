@@ -1,10 +1,37 @@
-<h1>Hey, let us make merry. And a new survey.</h1>
 
-<%= simple_form_for @survey do |survey_form| %>
-  <p>heading: <%= survey_form.text_field :heading %></p>
-  <p>intro: <%= survey_form.text_field :intro %></p>
 
-  <%= survey_form.association :assessment, as: :radio_buttons %>
 
-  <%= survey_form.submit "Submit" %>
-<% end %>
+<body>
+<div class='background-photo-survey-new'>
+<div class='background-filter-survey-new'>
+  <span class='display-survey'>
+    <h1 class='title'>Hey, let us make merry. And a new survey.</h1>
+  </span>
+
+
+  <section class='right-content'>
+    <%= simple_form_for @survey do |survey_form| %>
+    <aside class="aside-survey-new">
+      <h2 class="column-header">Build a survey</h2>
+      <h2 class="column-subheader">introduce your assessment to your peers</h2>
+      <br></br>
+      <h2 class="field-header">heading</h2>
+      <%= survey_form.text_field :heading, class: 'heading-input' %>
+      <br></br>
+      <h2 class="field-header">intro</h2>
+      <%= survey_form.text_area :intro, id: "intro" %>
+      <br></br>
+      <%= survey_form.submit "Submit", class: 'submit-button' %>
+    </aside>
+    <article class="article-survey-new">
+      <h2 class="column-header">Choose an assessment to take</h2>
+      <h1 style="font-size: 1.5em;"><%= survey_form.association :assessment, as: :radio_buttons%></h1>
+    </article>
+    <% end %>
+  </section>
+
+
+  <footer></footer>
+</div>
+</div>
+</body>

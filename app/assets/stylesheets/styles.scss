@@ -1,6 +1,6 @@
-$mobile: new-breakpoint(max-width 480px 4);
-$small-screen: new-breakpoint(max-width 640px 8);
-$large-screen: new-breakpoint(min-width 768px 12);
+$mobile: new-breakpoint(max-width 30em 4);
+$small-screen: new-breakpoint(max-width 40em 8);
+$large-screen: new-breakpoint(min-width 50em 12);
 
 // typefaces
 html {

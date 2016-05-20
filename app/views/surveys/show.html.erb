@@ -1,16 +1,23 @@
-<h1><%= @survey.assessment.title %></h1>
+<body>
+<div class='background-photo-survey-new'>
+<div class='background-filter-survey-new'>
 
-<h1><%= @survey.heading %></h1>
+  <div class='display-survey-show'>
+    <h1 class='title-a'><%= @survey.heading %></h1>
+    <h1 class='title-b'>Results</h1>
+  </div>
 
-<h1>RESULTS</h1>
+  <section class='solo-content'>
+    <% @survey.questions.each do |question| %>
+    <article class="results">
+      <h1 style="display: inline-block;"><%= question.body %>:</h1>
+      <h1 style="display: inline-block; font-weight: bold; float: right;"><%= question.average_answer_for_survey(@survey) %></h1>
+    </article>
+    <% end %>
+  </section>
 
-<ul>
-<% @survey.questions.each do |question| %>
+  <footer></footer>
 
-  <li>
-    <%= question.body %>:
-    <%= question.average_answer_for_survey(@survey) %>
-  </li>
-
-<% end %>
-</ul>
+</div>
+</div>
+</body>

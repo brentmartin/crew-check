@@ -1,0 +1,41 @@
+html {
+// style below
+
+
+  .eval-button {
+    $large-screen: 50em !default;
+
+
+    :hover {
+      color: #D3D3D3;
+    }
+
+    input {
+      display: none;
+    }
+
+    label {
+      font-weight: normal;
+
+      @include media($large-screen) {
+        float: left;
+        padding: 0 0.5em;
+      }
+    }
+
+    .button-group-item {
+      cursor: pointer;
+      display: inline-block;
+      width: 100%;
+
+      @include media($large-screen) {
+        width: auto;
+      }
+    }
+
+    input:checked + .button-group-item {
+      color: #ff0000;
+    }
+  }
+
+}

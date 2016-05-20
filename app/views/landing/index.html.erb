@@ -11,7 +11,7 @@
 <ul>
   <% @surveys.each do |survey| %>
     <li>
-      <%= survey.heading %>: <%= survey.assessment.title %>
+      <%= survey.heading %>
       <%= link_to "View the survey results", survey_path(survey) %> |
       <%= link_to "Take this survey", new_completed_survey_path(survey_id: survey.id) %>
     </li>

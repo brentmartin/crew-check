@@ -27,7 +27,7 @@
 # Create a user (not yet!)
 # Admin will create an assessment (template) that will be viewed by potential assessees
 # Create a single assessment
-assessment = Assessment.create(title: Faker::Name.title, description: Faker::Company.catch_phrase)
+assessment = Assessment.create(title: Faker::Name.title + " Assessment", description: Faker::Company.catch_phrase)
 
   # Create questions for the assessment
 assessment.questions << Question.create(body: "Question one")

@@ -2,13 +2,14 @@
 <div class='background-photo-survey-new'>
 <div class='background-filter-survey-new'>
 
-<% if flash[:success] %>
-  <p><%= flash[:success] %></p>
-<% end %>
+  <span class='display-landing'>
+    <h1>Choose a survey to view, or lets <%= link_to "create one", new_survey_path %></h1>
+  </span>
 
-<%= link_to "Create a new survey", new_survey_path %>
+  <% if flash[:success] %>
+    <p><%= flash[:success] %></p>
+  <% end %>
 
-<h2>Choose a survey:</h2>
   <section class='full-right-content'>
 
     <aside class="aside-landing">

@@ -87,3 +87,20 @@
   @include reset-display();
 }
 
+body {
+  section {
+    padding: 1em;
+    .aside-landing {
+      div {
+        background: rgba(249,249,249,0.95);
+        box-shadow: 0 .5px 6px rgba(0, 0, 0, 0.05);
+        border-radius: 3px;
+        padding: 1em;
+        h1 {
+          font-weight: 700;
+        }
+      }
+    }
+
+  }
+}

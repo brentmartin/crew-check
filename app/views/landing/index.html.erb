@@ -12,24 +12,26 @@
   <section class='full-right-content'>
     <aside class="aside-landing">
     </aside>
+
     <article class="article-landing">
+      <% @surveys.each do |survey| %>
       <div class="survey-tile-side-image">
         <div class="survey-tile-images-wrapper"></div>
           <div class="survey-side-image-content">
+            <h4>Assessment Name</h4>
+            <h1><%= survey.heading %></h1>
+            <p><%= survey.intro %></p>
             <div class="survey-tile-link-buttons">
+              <span><%= link_to "View the survey results", survey_path(survey) %></span>
+              <span>|</span>
+              <span><%= link_to "Take this survey", new_completed_survey_path(survey_id: survey.id) %></span>
             </div>
         </div>
       </div>
+      <br>
+      <% end %>
     <article>
+
   <section>
 
-<ul>
-  <% @surveys.each do |survey| %>
-    <li>
-      <%= survey.heading %>
-      <%= link_to "View the survey results", survey_path(survey) %> |
-      <%= link_to "Take this survey", new_completed_survey_path(survey_id: survey.id) %>
-    </li>
-  <% end %>
-</ul>
 <body>

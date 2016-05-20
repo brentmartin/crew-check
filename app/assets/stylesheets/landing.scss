@@ -9,3 +9,81 @@
   background:rgba(200,200,200,0.6);
   padding-bottom: 15em;
 }
+
+
+.survey-tile-side-image {
+  $base-line-height: 1.5em !default;
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $large-screen: 53.75em !default;
+  $base-font-color: $dark-gray !default;
+  $side-image-background-top: #B5EBEB;
+  $side-image-background-bottom: #5DAC5D;
+  $side-image-content-background: rgba(249,249,249,0.95);
+  $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
+
+  background: $side-image-content-background;
+
+  margin: 0 0 1em;
+  border-radius: 5px;
+
+  @include media($large-screen) {
+    @include row(table);
+  }
+
+  .survey-tile-images-wrapper {
+    background: url("https://source.unsplash.com/collection/186559/300x600"),
+                linear-gradient($side-image-background-top, $side-image-background-bottom),
+                no-repeat $side-image-background-top scroll;
+    background-color: $side-image-background-top;
+    background-size: cover;
+    border-bottom: $side-image-border;
+    display: block;
+    min-height: 12em;
+    padding: 3em;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    @include media($large-screen) {
+      @include span-columns(4);
+      background-position: bottom;
+      background-size: cover;
+      border-right: $side-image-border;
+    }
+  }
+
+  .survey-side-image-content {
+    @include span-columns(12);
+    padding: 1em 1em 4em 1em;
+
+    @include media($large-screen) {
+      @include span-columns(8);
+      padding: 4em 4em 8em 4em;
+    }
+
+    h1 {
+      margin: 0.67em 0 0.9em;
+      font-size: 2em;
+      font-weight: 700;
+    }
+
+    h4 {
+      background: #BBB;
+      color: white;
+      display: inline-block;
+      font-size: 0.75em;
+      margin-bottom: 1.3em;
+      padding: 3px 8px;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: $base-font-color;
+      line-height: $base-line-height;
+      margin-bottom: 3em;
+    }
+  }
+
+  @include reset-display();
+}
+

@@ -13,7 +13,6 @@
 
       <article class="completed-survey-new">
       <%= form_for @completed_survey do |form| %>
-        <!-- Form field to allow user to answer question -->
         <%= form.fields_for :evaluations do |evaluation_form| %>
         <br>
           <div class="eval-panel">
@@ -45,7 +44,6 @@
           </div>
         <% end %>
 
-        <!-- Submit the form -->
         <%= form.submit "Submit" %>
       <% end %>
       </article>

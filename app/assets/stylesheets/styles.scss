@@ -312,8 +312,8 @@ html {
 
   .solo-content {
     @include outer-container;
-    article { @include span-columns(7);
-              @include shift(2.5);
+    article { @include span-columns(8);
+              @include shift(2);
     }
   }
 }

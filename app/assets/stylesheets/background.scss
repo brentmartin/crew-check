@@ -1,6 +1,7 @@
 .picture {
   height: 900px;
   max-height: 100%;
+  width: 100%;
   position: absolute;
 }
 .overlay-bottom {
@@ -8,10 +9,31 @@
   max-height: 100%;
   width: 100%;
   position: absolute;
+  background-image:
+    linear-gradient(to bottom,
+      rgba(0,255,255,0.2),
+      rgba(0,255,255,.48),
+      rgba(0,255,255,.675),
+      rgba(0,255,255,.785),
+      rgba(0,255,255,.81),
+      rgba(0,255,255,.785),
+      rgba(0,255,255,.675),
+      rgba(0,255,255,.48),
+      rgba(0,255,255,0.2)
+    );
 }
 .overlay-top {
   height: 900px;
   max-height: 100%;
   width: 100%;
   position: absolute;
+  background-image:
+    linear-gradient(to bottom,
+      rgba(0,255,255,.75),
+      rgba(0,255,255,.5),
+      rgba(0,255,255, 0),
+      rgba(0,255,255, 0),
+      rgba(0,255,255,.5),
+      rgba(0,255,255,.75)
+    );
 }

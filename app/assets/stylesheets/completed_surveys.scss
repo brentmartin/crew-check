@@ -1,46 +1,53 @@
-html {
-// style below
-
 body {
 
   #content {
     position: absolute;
     z-index: 500;
 
-  .eval-button {
-    $large-screen: 50em !default;
-
-
-    :hover {
-      color: #D3D3D3;
+    h1
+    h2
+    h3
+    h4
+    h5
+    h6
+    p {
+      color: rgb(240,240,240);
     }
 
-    input {
-      display: none;
-    }
+    .eval-button {
+      $large-screen: 50em !default;
 
-    label {
-      font-weight: normal;
 
-      @include media($large-screen) {
-        float: left;
-        padding: 0 0.5em;
+      :hover {
+        color: #D3D3D3;
       }
-    }
 
-    .button-group-item {
-      cursor: pointer;
-      display: inline-block;
-      width: 100%;
-
-      @include media($large-screen) {
-        width: auto;
+      input {
+        display: none;
       }
-    }
 
-    input:checked + .button-group-item {
-      color: #ff0000;
+      label {
+        font-weight: normal;
+
+        @include media($large-screen) {
+          float: left;
+          padding: 0 0.5em;
+        }
+      }
+
+      .button-group-item {
+        cursor: pointer;
+        display: inline-block;
+        width: 100%;
+
+        @include media($large-screen) {
+          width: auto;
+        }
+      }
+
+      input:checked + .button-group-item {
+        color: #ff0000;
+      }
     }
   }
-
 }

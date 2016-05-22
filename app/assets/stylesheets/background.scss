@@ -4,6 +4,13 @@
   width: 100%;
   position: absolute;
 }
+.overlay-grayscale {
+  height: 900px;
+  max-height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,.2);
+}
 .overlay-bottom {
   height: 900px;
   max-height: 100%;

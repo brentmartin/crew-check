@@ -2,12 +2,14 @@
   height: 900px;
   max-height: 100%;
   width: 100%;
+  z-index: 100;
   position: absolute;
 }
 .overlay-grayscale {
   height: 900px;
   max-height: 100%;
   width: 100%;
+  z-index: 200;
   position: absolute;
   background-color: rgba(0,0,0,.2);
 }
@@ -15,6 +17,7 @@
   height: 900px;
   max-height: 100%;
   width: 100%;
+  z-index: 300;
   position: absolute;
   background-image:
     linear-gradient(to bottom,
@@ -33,6 +36,7 @@
   height: 900px;
   max-height: 100%;
   width: 100%;
+  z-index: 600;
   position: absolute;
   background-image:
     linear-gradient(to bottom,

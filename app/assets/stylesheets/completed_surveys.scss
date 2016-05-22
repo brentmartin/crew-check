@@ -1,6 +1,11 @@
 html {
 // style below
 
+body {
+
+  #content {
+    position: absolute;
+    z-index: 500;
 
   .eval-button {
     $large-screen: 50em !default;

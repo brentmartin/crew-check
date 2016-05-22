@@ -1,0 +1,49 @@
+.picture {
+  height: 900px;
+  max-height: 100%;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+}
+.overlay-grayscale {
+  height: 900px;
+  max-height: 100%;
+  width: 100%;
+  z-index: 200;
+  position: fixed;
+  background-color: rgba(0,0,0,.2);
+}
+.overlay-bottom {
+  height: 900px;
+  max-height: 100%;
+  width: 100%;
+  z-index: 300;
+  position: fixed;
+  background-image:
+    linear-gradient(to bottom,
+    rgba(0,255,255,0.41),
+    rgba(0,255,255,0.71),
+    rgba(0,255,255,0.78),
+    rgba(0,255,255,0.795),
+    rgba(0,255,255,0.78),
+    rgba(0,255,255,0.71),
+    rgba(0,255,255,0.41)
+    );
+}
+.overlay-top {
+  height: 900px;
+  max-height: 100%;
+  width: 100%;
+  z-index: 600;
+  pointer-events: none;
+  position: fixed;
+  background-image:
+    linear-gradient(to bottom,
+      rgba(0,255,255,.75),
+      rgba(0,255,255,.15),
+      rgba(0,255,255, 0),
+      rgba(0,255,255, 0),
+      rgba(0,255,255,.15),
+      rgba(0,255,255,.75)
+    );
+}

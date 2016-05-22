@@ -11,12 +11,12 @@
 assessment = Assessment.create(title: Faker::Name.title + " Assessment", description: Faker::Company.catch_phrase)
 
   # Create questions for the assessment
-assessment.questions << Question.create(body: "Question one")
-assessment.questions << Question.create(body: "Question two")
-assessment.questions << Question.create(body: "Question three")
-assessment.questions << Question.create(body: "Question four")
-assessment.questions << Question.create(body: "Question five")
-assessment.questions << Question.create(body: "Question six")
+assessment.questions << Question.create(body: Faker::Hacker.say_something_smart+"?")
+assessment.questions << Question.create(body: Faker::Hacker.say_something_smart+"?")
+assessment.questions << Question.create(body: Faker::Hacker.say_something_smart+"?")
+assessment.questions << Question.create(body: Faker::Hacker.say_something_smart+"?")
+assessment.questions << Question.create(body: Faker::Hacker.say_something_smart+"?")
+assessment.questions << Question.create(body: Faker::Hacker.say_something_smart+"?")
 
 # Create a survey
 survey = Survey.create(assessment: assessment, heading: Faker::StarWars.quote, intro: Faker::Hipster.paragraph(rand(2..5)))

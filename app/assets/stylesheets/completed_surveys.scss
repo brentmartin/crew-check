@@ -13,10 +13,13 @@ body {
     p {
       color: rgb(240,240,240);
     }
+    .eval-panel {
 
     .eval-button {
       $large-screen: 50em !default;
+      }
 
+      .eval-selection {
 
       :hover {
         color: #D3D3D3;
@@ -25,6 +28,7 @@ body {
       input {
         display: none;
       }
+        }
 
       label {
         font-weight: normal;

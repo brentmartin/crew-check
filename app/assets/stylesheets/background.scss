@@ -37,6 +37,7 @@
   max-height: 100%;
   width: 100%;
   z-index: 600;
+  pointer-events: none;
   position: absolute;
   background-image:
     linear-gradient(to bottom,

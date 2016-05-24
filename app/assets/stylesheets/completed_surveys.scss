@@ -105,6 +105,13 @@ body {
           font-weight: 300;
           text-align: center;
 
+          .first-button {
+            border-width: 2px 1px 0 0;
+          }
+
+          .last-button {
+            border-width: 2px 0 0 1px;
+          }
 
           &:hover {
             color: rgba(175,255,255, 1);

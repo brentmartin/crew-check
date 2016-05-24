@@ -11,5 +11,4 @@ Rails.application.routes.draw do
     root to: 'landing#new'
   end
 
-  root to: "landing#index"
 end

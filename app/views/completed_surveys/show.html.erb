@@ -1,12 +1,13 @@
 <h1>Survey answers</h1>
 <p>filled out</p>
 
-<%= form_for @completed_survey do |form|%>
-  <br />
-  <%= form.fields_for :evaluations do |evaluation_form| %>
-    <%= evaluation_form.object.question.body %>
-    <%= evaluation_form.object.answer %>
-    <br>
-  <% end %>
-<% end %>
-  
+      <section class='solo-content'>
+        <%= form_for @completed_survey do |form|%>
+          <%= form.fields_for :evaluations do |evaluation_form| %>
+        <article class='grid-content'>
+            <p><%= evaluation_form.object.answer %></p>
+            <p><%= evaluation_form.object.question.body %></p>
+        </article>
+        <% end %>
+      <% end %>
+      </section>

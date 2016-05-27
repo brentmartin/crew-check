@@ -5,13 +5,17 @@
 <div class='overlay-top'></div>
 
   <div id='display-completed-survey'>
+    <div class='show'>
       <p>Thank you for taking</p>
       <h1><%= @completed_survey.survey.assessment.title %></h1>
       <h2><%= @completed_survey.survey.heading %></h2>
       <p class='description'>filled out</p>
       <span><p>Interested in doing one?...<%= link_to 'learn more', root_path %></span>
+    </div>
   </div>
+
   <div id='content-completed-survey'>
+    <div class='show'>
       <section class='solo-content'>
         <%= form_for @completed_survey do |form|%>
           <%= form.fields_for :evaluations do |evaluation_form| %>
@@ -22,6 +26,7 @@
         <% end %>
       <% end %>
       </section>
+    </div>
   </div>
   <footer></footer>
 </body>

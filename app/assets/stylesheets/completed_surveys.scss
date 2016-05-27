@@ -154,6 +154,16 @@ body {
       p {
         display: inline;
       }
+      .grid-content-aside {
+        @include span-columns(1 of 8);
+      }
+      .grid-content-article {
+        @include span-columns(7 of 8);
+        background:none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+      }
     }
   }
 }

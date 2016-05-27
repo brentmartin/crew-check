@@ -130,4 +130,18 @@ body {
       }
     }
   }
+//### Show page styling ###
+  #display-completed-survey .show {
+    p {
+      margin-bottom: 0;
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin-bottom: 1em;
+    }
+  }
 }

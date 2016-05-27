@@ -1,6 +1,9 @@
 <h1>Survey answers</h1>
 <p>filled out</p>
 
+  <div id='display-completed-survey'>
+  </div>
+  <div id='content-completed-survey'>
       <section class='solo-content'>
         <%= form_for @completed_survey do |form|%>
           <%= form.fields_for :evaluations do |evaluation_form| %>
@@ -11,3 +14,4 @@
         <% end %>
       <% end %>
       </section>
+  </div>

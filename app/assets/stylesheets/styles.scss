@@ -314,6 +314,7 @@ html {
     @include outer-container;
     article { @include span-columns(8);
               @include shift(2);
+    aside { @include span-columns(0); }
     }
   }
 }

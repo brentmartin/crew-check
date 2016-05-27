@@ -4,25 +4,27 @@
 <div class="overlay-bottom"></div>
 <div class="overlay-top"></div>
 
-  <span class='display-completed-survey-new'>
-    <h1><%= @survey.assessment.title %></h1>
-    <h2><%= @survey.heading %></h2>
-    <p><%= @survey.intro %></p>
-  </span>
-  <div id="content">
+  <div id="display-completed-survey">
+    <div class="new">
+      <h1><%= @survey.assessment.title %></h1>
+      <h2><%= @survey.heading %></h2>
+      <p><%= @survey.intro %></p>
+    </div>
+  </div>
+
+  <div id="content-completed-survey">
     <section class="solo-content">
-      <article class="completed-survey-new">
+      <article>
       <%= form_for @completed_survey do |form| %>
         <%= form.fields_for :evaluations do |evaluation_form| %>
         <br>
           <div class="eval-panel">
             <h2><%= evaluation_form.object.question.body %></h2>
             <%= evaluation_form.hidden_field :question_id, value: evaluation_form.object.question.id %>
-
             <div class="eval-selection">
 
                 <%= evaluation_form.radio_button :answer, 1.0 %>
-                <%= evaluation_form.label :answer, "1", value: 1.0, class: "button-group-item" %>
+                <%= evaluation_form.label :answer, "1", value: 1.0, class: "button-group-item first-button" %>
 
                 <%= evaluation_form.radio_button :answer, 2.0 %>
                 <%= evaluation_form.label :answer, "2", value: 2.0, class: "button-group-item" %>
@@ -34,12 +36,11 @@
                 <%= evaluation_form.label :answer, "4", value: 4.0, class: "button-group-item" %>
 
                 <%= evaluation_form.radio_button :answer, 5.0 %>
-                <%= evaluation_form.label :answer, "5", value: 5.0, class: "button-group-item" %>
+                <%= evaluation_form.label :answer, "5", value: 5.0, class: "button-group-item last-button" %>
 
             </div>
           </div>
         <% end %>
-
         <%= form.submit "Submit" %>
       <% end %>
       </article>

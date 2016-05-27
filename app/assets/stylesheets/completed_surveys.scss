@@ -44,8 +44,8 @@ body {
     }
     .eval-panel {
       border-style: solid;
-      border-width: 2px 2px 2px 2px;
-      border-color: rgba(255,255,255,0.9);
+      border-width: 8px 2px 2px 2px;
+      border-color: rgba(255,255,255,1);
       box-shadow: 0 .5px 6px rgba(0, 0, 0, 0.05);
       border-radius: 6px;
       background-color: rgba(0,0,0,0);
@@ -54,22 +54,19 @@ body {
 
       h2 {
         padding: 1em 1em 1em;
-        color: rgba(255,255,255,1.0);
+        color: rgba(255,255,255,1);
         font-size: 1.8em;
         margin: 0;
       }
       &:hover {
-        border-width: 2px 2px 2px 2px;
-        border-color: rgba(255,255,255,0.9);
+        border-width: 8px 2px 2px 2px;
+        border-color: rgba(255,255,255,1);
         box-shadow: none;
-        h2 {
-          color: rgba(255,255,255,0.9);
-        }
       }
 
       .eval-selection {
         $large-screen: 50em !default;
-        color: rgb(240,240,240);
+        color: rgb(255,255,255);
         -ms-box-orient: horizontal;
         display: -webkit-box;
         display: -moz-box;
@@ -95,15 +92,22 @@ body {
           display: none;
         }
 
+        .first-button {
+          border-width: 2px 1px 0 0;
+        }
+
+        .last-button {
+          border-width: 2px 0 0 1px;
+        }
+
         label {
-          color: rgb(240,240,240);
+          color: rgb(255,255,255);
           flex: 1;
           border-style: solid;
           border-width: 2px 1px 0 1px;
-          border-color: rgba(255,255,255,0.8);
+          border-color: rgba(255,255,255,1);
           font-weight: 300;
           text-align: center;
-
 
           &:hover {
             color: rgba(175,255,255, 1);
@@ -124,7 +128,7 @@ body {
 
         input:checked + .button-group-item {
           color: rgba(0,214,214, 1);
-          background-color: rgb(240,240,240);
+          background-color: rgb(255,255,255);
         }
       }
     }

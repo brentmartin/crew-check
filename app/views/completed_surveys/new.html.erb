@@ -11,14 +11,13 @@
   </span>
   <div id="content-completed-survey">
     <section class="solo-content">
-      <article class="completed-survey-new">
+      <article>
       <%= form_for @completed_survey do |form| %>
         <%= form.fields_for :evaluations do |evaluation_form| %>
         <br>
           <div class="eval-panel">
             <h2><%= evaluation_form.object.question.body %></h2>
             <%= evaluation_form.hidden_field :question_id, value: evaluation_form.object.question.id %>
-
             <div class="eval-selection">
 
                 <%= evaluation_form.radio_button :answer, 1.0 %>
@@ -39,7 +38,6 @@
             </div>
           </div>
         <% end %>
-
         <%= form.submit "Submit" %>
       <% end %>
       </article>

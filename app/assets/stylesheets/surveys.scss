@@ -11,7 +11,6 @@
 }
 // body styling
 body {
-
   .display-survey-new {
     position: relative;
     display: block;
@@ -28,7 +27,6 @@ body {
   }
 
   section {
-
     .article-survey-new {
       background:rgba(245,245,245,0.6);
       box-shadow: 0 .5px 6px rgba(0, 0, 0, 0.05);
@@ -50,7 +48,6 @@ body {
       border-radius: 3px;
       padding: 1em;
 
-
       .heading-input {
         padding-left: .5em;
         border-style: none;
@@ -60,12 +57,14 @@ body {
         height: 2em;
         border-radius: 4px;
         background:rgba(255,255,255,0.6);
+
         &:focus {
           transition: all 200ms linear;
           box-shadow: 0 .5px 6px rgba(0, 0, 0, 0.1);
           background:rgba(255,255,255,0.9);
         }
       }
+
       textarea#intro {
         padding: .4em .5em;
         border-style: none;
@@ -76,6 +75,7 @@ body {
         border-radius: 4px;
         resize: none;
         background:rgba(255,255,255,0.6);
+
         &:focus {
           transition: all 200ms linear;
           box-shadow: 0 .5px 6px rgba(0, 0, 0, 0.1);
@@ -93,9 +93,11 @@ body {
         border-radius: 3px;
         width: 100%;
         max-width: 5em;
+
         &:hover {
           color: #333;
         }
+
         &:focus {
           transition: all 200ms linear;
           background-color: #ddd;
@@ -149,6 +151,4 @@ body {
       }
     }
   }
-
-
 }

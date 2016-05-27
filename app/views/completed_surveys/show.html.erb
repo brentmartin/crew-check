@@ -1,12 +1,36 @@
-<h1>Survey answers</h1>
-<p>filled out</p>
+<body>
+<div class='picture' style='background-image: url(https://source.unsplash.com/5d2ETacuSgw/1600x900)'></div>
+<div class='overlay-grayscale'></div>
+<div class='overlay-bottom'></div>
+<div class='overlay-top'></div>
 
-<%= form_for @completed_survey do |form|%>
-  <br />
-  <%= form.fields_for :evaluations do |evaluation_form| %>
-    <%= evaluation_form.object.question.body %>
-    <%= evaluation_form.object.answer %>
-    <br>
-  <% end %>
-<% end %>
-  
+  <div id='display-completed-survey'>
+    <div class='show'>
+      <p>Thank you for taking</p>
+      <h1><%= @completed_survey.survey.assessment.title %></h1>
+      <h2><%= @completed_survey.survey.heading %></h2>
+      <p class='description'>filled out</p>
+      <span><p>Interested in doing one?...<%= link_to 'learn more', root_path %></span>
+    </div>
+  </div>
+
+  <div id='content-completed-survey'>
+    <div class='show'>
+      <section class='solo-content'>
+        <%= form_for @completed_survey do |form|%>
+          <%= form.fields_for :evaluations do |evaluation_form| %>
+        <article class='grid-content'>
+          <aside class='grid-content-aside'>
+            <p><%= evaluation_form.object.answer %></p>
+          </aside>
+          <article class='grid-content-article'>
+            <p><%= evaluation_form.object.question.body %></p>
+          </article>
+        </article>
+        <% end %>
+      <% end %>
+      </section>
+    </div>
+  </div>
+  <footer></footer>
+</body>

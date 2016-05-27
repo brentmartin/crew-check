@@ -4,12 +4,12 @@
 <div class="overlay-bottom"></div>
 <div class="overlay-top"></div>
 
-  <span class='display-completed-survey-new'>
+  <span class='display-completed-survey'>
     <h1><%= @survey.assessment.title %></h1>
     <h2><%= @survey.heading %></h2>
     <p><%= @survey.intro %></p>
   </span>
-  <div id="content">
+  <div id="content-completed-survey">
     <section class="solo-content">
       <article class="completed-survey-new">
       <%= form_for @completed_survey do |form| %>

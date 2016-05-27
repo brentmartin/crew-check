@@ -20,8 +20,12 @@
         <%= form_for @completed_survey do |form|%>
           <%= form.fields_for :evaluations do |evaluation_form| %>
         <article class='grid-content'>
+          <aside class='grid-content-aside'>
             <p><%= evaluation_form.object.answer %></p>
+          </aside>
+          <article class='grid-content-article'>
             <p><%= evaluation_form.object.question.body %></p>
+          </article>
         </article>
         <% end %>
       <% end %>

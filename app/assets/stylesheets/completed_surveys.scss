@@ -144,4 +144,16 @@ body {
       margin-bottom: 1em;
     }
   }
+  #content-completed-survey .show {
+    section .grid-content {
+      @include span-columns(8);
+      background:rgba(245,245,245,0.8);
+      box-shadow: 0 .5px 6px rgba(0, 0, 0, 0.05);
+      border-radius: 3px;
+      padding: 1em;
+      p {
+        display: inline;
+      }
+    }
+  }
 }

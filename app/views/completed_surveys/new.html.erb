@@ -4,11 +4,14 @@
 <div class="overlay-bottom"></div>
 <div class="overlay-top"></div>
 
-  <span class="display-completed-survey">
-    <h1><%= @survey.assessment.title %></h1>
-    <h2><%= @survey.heading %></h2>
-    <p><%= @survey.intro %></p>
-  </span>
+  <div id="display-completed-survey">
+    <div class="new">
+      <h1><%= @survey.assessment.title %></h1>
+      <h2><%= @survey.heading %></h2>
+      <p><%= @survey.intro %></p>
+    </div>
+  </div>
+
   <div id="content-completed-survey">
     <section class="solo-content">
       <article>

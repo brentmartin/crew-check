@@ -1,32 +1,32 @@
 <body>
-<div class='background-photo-survey-new'>
-<div class='background-filter-survey-new'>
+<div class="background-photo-survey-new">
+<div class="background-filter-survey-new">
 
-  <span class='display-survey-new'>
-    <h1 class='title'>Hey, let us make merry. And a new survey.</h1>
+  <span class="display-survey-new">
+    <h1 class="title">Hey, let us make merry. And a new survey.</h1>
   </span>
 
-  <section class='right-content'>
+  <section class="right-content">
     <%= simple_form_for @survey do |survey_form| %>
     <aside class="aside-survey-new">
       <h2 class="column-header">Build a survey</h2>
       <h2 class="column-subheader">Tell us about what you are assessing</h2>
       <br></br>
       <h2 class="field-header">heading</h2>
-      <%= survey_form.text_field :heading, class: 'heading-input' %>
+      <%= survey_form.text_field :heading, class: "heading-input" %>
       <br></br>
       <h2 class="field-header">intro</h2>
       <%= survey_form.text_area :intro, id: "intro" %>
       <br></br>
-      <%= survey_form.submit "Submit", class: 'submit-button' %>
+      <%= survey_form.submit "Submit", class: "submit-button" %>
     </aside>
     <article class="article-survey-new">
       <h2 class="column-header">Choose an assessment</h2>
 
       <div class="assessment-collection">
         <%= survey_form.association :assessment, as: :radio_buttons,
-                                    item_wrapper_class: 'button-assess-group',
-                                    input_html: { class: 'assessment-button' },
+                                    item_wrapper_class: "button-assess-group",
+                                    input_html: { class: "assessment-button" },
                                     label: false, inline_label: true %>
       </div>
 

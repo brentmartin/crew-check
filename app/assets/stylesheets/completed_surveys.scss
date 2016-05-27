@@ -1,6 +1,6 @@
 body {
 
-  .display-completed-survey-new {
+  #display-completed-survey {
     z-index: 700;
     position: relative;
     display: block;
@@ -35,10 +35,9 @@ body {
     }
   }
 
-  #content {
+  #content-completed-survey {
     position: absolute;
     z-index: 500;
-    margin-top: 30em;
 
     h2 {
       color: rgb(240,240,240);
@@ -127,6 +126,42 @@ body {
           color: rgba(0,214,214, 1);
           background-color: rgb(240,240,240);
         }
+      }
+    }
+  }
+//### Show page styling ###
+  #display-completed-survey .show {
+    p {
+      margin-bottom: 0;
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin-bottom: 1em;
+    }
+  }
+  #content-completed-survey .show {
+    section .grid-content {
+      @include span-columns(8);
+      background:rgba(245,245,245,0.8);
+      box-shadow: 0 .5px 6px rgba(0, 0, 0, 0.05);
+      border-radius: 3px;
+      padding: 1em;
+      p {
+        display: inline;
+      }
+      .grid-content-aside {
+        @include span-columns(1 of 8);
+      }
+      .grid-content-article {
+        @include span-columns(7 of 8);
+        background:none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
       }
     }
   }

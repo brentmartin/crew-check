@@ -16,6 +16,7 @@
     <section class="solo-content">
       <article>
       <%= form_for @completed_survey do |form| %>
+        <%= form.hidden_field :survey_id, value: @survey.id %>
         <%= form.fields_for :evaluations do |evaluation_form| %>
         <br>
           <div class="eval-panel">

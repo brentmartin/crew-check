@@ -33,6 +33,7 @@ gem 'simple_form'
 # Gems for css frameworks
 gem 'bourbon'
 gem 'neat'
+gem 'clearance'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

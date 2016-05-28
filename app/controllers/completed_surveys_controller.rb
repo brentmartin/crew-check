@@ -14,7 +14,6 @@ class CompletedSurveysController < ApplicationController
 
   def create
     completed_survey = CompletedSurvey.new(completed_survey_params)
-    completed_survey.survey = Survey.first
     completed_survey.save
     redirect_to root_path
   end

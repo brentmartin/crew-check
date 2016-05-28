@@ -39,6 +39,7 @@
               <span><%= link_to "View the survey results", survey_path(survey) %></span>
               <span>|</span>
               <span><%= link_to "Take this survey", new_completed_survey_path(survey_id: survey.id) %></span>
+              <span><%= text_field_tag :completed_survey_url, new_completed_survey_url(survey_id: survey.id) %></span>
             </div>
         </div>
       </div>

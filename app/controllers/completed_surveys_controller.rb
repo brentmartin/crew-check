@@ -15,7 +15,7 @@ class CompletedSurveysController < ApplicationController
   def create
     completed_survey = CompletedSurvey.new(completed_survey_params)
     completed_survey.save
-    redirect_to root_path
+    redirect_to landing_index_path
   end
 
   private

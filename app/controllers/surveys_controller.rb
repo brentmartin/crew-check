@@ -15,7 +15,7 @@ class SurveysController < ApplicationController
 
     flash[:success] = "Survey created."
 
-    redirect_to root_path
+    redirect_to landing_index_path
   end
 
   private

@@ -41,4 +41,8 @@ $(document).ready(function() {
   $('.assessment-button').on('click', function() {
     $(this).parent().addClass( 'assessment-selected' )
   });
+
+  $('#completed_survey_url').on('click', function() {
+    $(this).select();
+  });
 });

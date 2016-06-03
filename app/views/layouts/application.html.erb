@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <%= render partial: "layouts/head" %>
-  </head>
-  <body>
+<head>
+  <%= render partial: "layouts/head" %>
+</head>
+<body>
 
-    <header class="navigation" role="banner">
-      <div class="navigation-wrapper">
-        <a href="javascript:void(0)" class="logo">
-          <img src="https://raw.githubusercontent.com/thoughtbot/empties/master/source/images/placeholder.png" alt="Logo Image">
-        </a>
-        <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">Menu</a>
-        <nav role="navigation">
-          <ul id="js-navigation-menu" class="navigation-menu show">
-            <li class="nav-link"><a href="javascript:void(0)">Assessments</a></li>
-            <li class="nav-link"><a href="javascript:void(0)">Surveys</a></li>
-            <li class="nav-link"><a href="javascript:void(0)">Results</a></li>
-          </ul>
-          <span>
-            <% if signed_in? %>
-              Signed in as: <%= current_user.email %>
-              <%= button_to 'Sign out', sign_out_path, method: :delete %>
-            <% else %>
-              <%= link_to 'Sign in', sign_in_path %>
+  <header class="navigation" role="banner">
+    <div class="navigation-wrapper">
+      <a href="javascript:void(0)" class="logo">
+        <img src="https://raw.githubusercontent.com/thoughtbot/empties/master/source/images/placeholder.png" alt="Logo Image">
+      </a>
+      <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">Menu</a>
+      <nav role="navigation">
+        <ul id="js-navigation-menu" class="navigation-menu show">
+          <li class="nav-link"><a href="javascript:void(0)">Assessments</a></li>
+          <li class="nav-link"><a href="javascript:void(0)">Surveys</a></li>
+          <li class="nav-link"><a href="javascript:void(0)">Results</a></li>
+        </ul>
+        <span>
+          <% if signed_in? %>
+            Signed in as: <%= current_user.email %>
+            <%= button_to 'Sign out', sign_out_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Sign in', sign_in_path %>
+          <% end %>
+
+          <div id="flash">
+            <% flash.each do |key, value| %>
+              <div class="flash <%= key %>"><%= value %></div>
             <% end %>
-
-            <div id="flash">
-              <% flash.each do |key, value| %>
-                <div class="flash <%= key %>"><%= value %></div>
-              <% end %>
-            </div>
-          </span>
-        </nav>
-      </div>
-    </header>
+          </div>
+        </span>
+      </nav>
+    </div>
+  </header>
 
 <%= yield %>
 
-  </body>
+</body>
 </html>

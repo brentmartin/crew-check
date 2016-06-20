@@ -11,8 +11,24 @@
   padding: 1em;
 
   .text-field {
+    margin-bottom: .5em;
+    label {
+      display: block;
+    }
+    input {
+
+    }
+
   }
+
   .password-field {
+    margin-bottom: .5em;
+    label {
+      display: block;
+    }
+    input {
+
+    }
   }
   .submit-field {
   }

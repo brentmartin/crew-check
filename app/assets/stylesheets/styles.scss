@@ -287,6 +287,7 @@ html {
 
 
 // Neat grid system
+  // Neat grid system
   .left-content {
     @include outer-container;
     article { @include span-columns(7);

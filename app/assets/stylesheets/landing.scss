@@ -11,7 +11,6 @@
   padding-bottom: 15em;
 }
 
-
 .survey-tile-side-image {
   $base-line-height: 1.5em !default;
   $action-color: #477DCA !default;
@@ -24,7 +23,6 @@
   $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
 
   background: $side-image-content-background;
-
   margin: 0 0 1em;
   border-radius: 5px;
 

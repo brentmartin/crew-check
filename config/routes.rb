@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   resources :landing, only: [:index]
 
   constraints Clearance::Constraints::SignedIn.new do
-    root to: 'landing#index', as: :signed_in_root
+    root to: "landing#index", as: :signed_in_root
   end
 
   constraints Clearance::Constraints::SignedOut.new do
-    root to: 'home#index'
+    root to: "home#index"
   end
 end

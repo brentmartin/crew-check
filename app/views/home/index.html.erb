@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <span class="display-sign-in">
-      <h1>Welcome</h1>
-    </span>
   </head>
 
   <body>
-    <section>
-      <aside>
-        <%= link_to "Sign In", sign_in_path %>
-      </aside>
+    <section class="even-content">
       <article>
-        <%= link_to "Sign Up", sign_up_path %>
+        <p>Returning? Welcome back!</p>
+        <%= link_to "Sign In", sign_in_path, :class => "items" %>
       </article>
+      <aside>
+        <p>New to Crew Check?</p>
+        <%= link_to "Sign Up", sign_up_path, :class => "items"  %>
+      </aside>
     </section>
   </body>
 </html>

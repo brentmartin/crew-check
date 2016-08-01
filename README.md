@@ -12,6 +12,9 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+<p align="left">
+  <img src="erd.pdf"/>
+</p>
 
 * Database initialization
 

@@ -303,6 +303,14 @@ html {
     }
   }
 
+  .even-content {
+    @include outer-container;
+    article { @include span-columns(4);
+              @include shift(2);
+    }
+    aside { @include span-columns(4); }
+  }
+
   .full-right-content {
     @include outer-container;
     article { @include span-columns(9); }

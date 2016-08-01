@@ -28,12 +28,11 @@ $(document).ready(function() {
       }
     });
   });
-});
 
-$(document).ready(function() {
   $(".assessment-button").on("click", function() {
     $(".assessment-button").parent().removeClass( "assessment-selected" )
   });
+
   $(".assessment-button").on("click", function() {
     $(this).parent().addClass( "assessment-selected" )
   });

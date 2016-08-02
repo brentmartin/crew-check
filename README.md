@@ -20,3 +20,12 @@ The goal is never to see how well you scored, rather to see how close you are to
 
 
 
+## Gems, Libraries, and Technologies
+* Ruby 2.3.0
+* Rails 4.2.6
+* JQuery & JavaScript
+* [Bourbon](https://github.com/thoughtbot/bourbon) - A simple and lightweight mixin library for Sass.
+* [Neat](https://github.com/thoughtbot/neat) - A semantic grid framework built with Bourbon.
+* [Clearance](https://github.com/thoughtbot/clearance) - Rails authentication with email & password.
+* PostgreSQL - An object-relational database management system
+* Heroku & GitHub

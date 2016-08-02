@@ -6,15 +6,15 @@ Visit [Crew Check](https://limitless-temple-49298.herokuapp.com) to see a live v
 
 
 ## Description
-CrewCheck helps you better understand your own skill-sets. Many developers suffer from [imposter syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome) which can really holds them back. CrewCheck helps solve this issue through using the peer feedback of those who have worked closely with you. 
+CrewCheck helps you better understand your own skill-sets. Many developers suffer from [imposter syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome) which can really holds them back. CrewCheck helps solve this issue through using the peer feedback of those who have worked closely with you.
 
-### How it works
+#### How it works
 CrewCheck starts with you selecting a survey to give to your peers. Each survey is full of quantifiable answers using ratings of one to five. Once selected, you take a self-assessment of the questions on the survey. Afterwards, you send the survey out to group of your peers. Once the minimum threshold of responses has been hit, your peer average for each question is shown to you. It is displayed along side of your own self-assessment.
 
-### Gaining honest feedback
+#### Gaining honest feedback
 Good feedback is difficult to get, especially from peers who you are close with. CrewCheck combines an average of the feedback given making it impossible to reveal the identity of any particular peer's feedback. This is designed to give you better, more authentic, feedback.
 
-### How do I win?
+#### How do I win?
 The goal is never to see how well you scored, rather to see how close you are to your peers assessment. The closer your assessments are, the more accurate understanding you have of your own skill-sets.
 
 
@@ -30,4 +30,4 @@ The goal is never to see how well you scored, rather to see how close you are to
 
 
 ## UML Model Diagram
-![](./erd.pdf)
+![](./erd.png)

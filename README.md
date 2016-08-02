@@ -1,31 +1,14 @@
-== README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Crew Check
+Peer-sourced feedback on your skill-sets gathered by surveying those who know you best.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-<p align="left">
-  <img src="erd.pdf"/>
-</p>
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Visit [Crew Check](https://limitless-temple-49298.herokuapp.com) to see a live version of the site.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
+
+
+
+
+

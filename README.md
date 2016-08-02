@@ -18,8 +18,6 @@ Good feedback is difficult to get, especially from peers who you are close with.
 The goal is never to see how well you scored, rather to see how close you are to your peers assessment. The closer your assessments are, the more accurate understanding you have of your own skill-sets.
 
 
-
-
 ## Gems, Libraries, and Technologies
 * Ruby 2.3.0
 * Rails 4.2.6
@@ -29,3 +27,7 @@ The goal is never to see how well you scored, rather to see how close you are to
 * [Clearance](https://github.com/thoughtbot/clearance) - Rails authentication with email & password.
 * PostgreSQL - An object-relational database management system
 * Heroku & GitHub
+
+
+## UML Model Diagram
+![](./erd.pdf)
